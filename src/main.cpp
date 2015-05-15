@@ -25,7 +25,6 @@ int main(int argc, char **argv) {
                 abort();
         }
 
-    set_input(stdin);
     std::unique_ptr<PAL::APS> aps = parse();
     cout << "Parsed APS: " << std::endl <<  *aps << endl;
     if(fromfile)

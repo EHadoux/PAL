@@ -92,9 +92,7 @@ void set_input(FILE *in) {
 }
 
 std::unique_ptr<PAL::APS> parse() {
-   do {
     yyparse();
-    } while(!feof(yyin));
     return move(aps);
 }
 

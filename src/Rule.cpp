@@ -32,7 +32,7 @@ std::string PAL::Rule::to_string() const {
     else {
         auto it = _premisses.cbegin();
         s << (it->second == NEG ? "!" : "") << it->first;
-        for(; it != _premisses.cend(); ++it)
+        for(++it; it != _premisses.cend(); ++it)
             s << " & " << (it->second == NEG ? "!" : "") << it->first;
     }
     s << " => " << _probabilities[0] << " / " << *_acts[0];
